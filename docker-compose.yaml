@@ -1,0 +1,7 @@
+services:
+  nginx:
+    image: nginx:1.27.0-alpine
+    container_name: nginx_c
+    ports:
+      - ${NGINX_PORT_OUT}:${NGINX_PORT}
+      - ${NGINX_SSL_OUT}:${NGINX_SSL}
