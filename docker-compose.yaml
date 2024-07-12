@@ -1,8 +1,12 @@
 services:
   nginx:
-    image: nginx:1.27.0-alpine
-    restart: unless-stopped
+    #image: nginx:1.27.0-alpine
+    image: nginx-my
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: nginx_c
+    restart: unless-stopped
     ports:
       - ${NGINX_PORT_OUT}:${NGINX_PORT}
       - ${NGINX_SSL_OUT}:${NGINX_SSL}

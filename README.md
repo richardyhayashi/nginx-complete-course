@@ -8,6 +8,10 @@
 * Reverse Proxy
 * Load Balancer
 
+### Nginx Documentation
+
+'https://nginx.org/en/docs/'
+
 ## Curl
 
 `$ curl localhost:8080`
@@ -30,6 +34,21 @@
 `$ semanage fcontext -a -t httpd_sys_content_t '/var/www/(/.*)?'`
 `$ restorecon -R -v /var/www`
 
+## Authenication
+
+`$ apt install -y apache2-utils`
+or
+`$ yum install -y httpd-tools`
+
+### Generate Password File
+
+`$ htpasswd -c /etc/nginx/.htpasswd admin`
+* Will ask for password; creates encoded password.
+
+### Access Protected Page
+
+`$ curl -u admin:supersecret loclahosr:8080/admin.html`
+
 ## YouTube
 
 by `Science Course`
@@ -44,7 +63,7 @@ by `Science Course`
 8. Nginx Configurations 
 9. Setting first virtual host
 10. Errors (404, 50x)
-11.
+11. Basic Authentication
 12.
 13.
 14.
