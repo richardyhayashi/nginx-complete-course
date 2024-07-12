@@ -1,7 +1,13 @@
 services:
   nginx:
     image: nginx:1.27.0-alpine
+    restart: unless-stopped
     container_name: nginx_c
     ports:
       - ${NGINX_PORT_OUT}:${NGINX_PORT}
       - ${NGINX_SSL_OUT}:${NGINX_SSL}
+    volumes:
+      - ./etc/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./var/www/example.com/html:/var/www/example.com/html
+    #env_file:
+      #  - ./.env

@@ -8,6 +8,26 @@
 * Reverse Proxy
 * Load Balancer
 
+## Curl
+
+`$ curl localhost:8080`
+
+### Using Header
+
+`$ curl --header "Host: example.com" localhost:8080`
+`$ curl --header "Host: www.example.com" localhost:8080`
+
+## Selinux
+
+### Look at Setting
+
+`$ semanage fcontext -l | grep /usr/share/nginx/html`
+
+### Set Setting
+
+`$ semanage fcontext -a -t httpd_sys_content_t '/var/www/(/.*)?'`
+`$ restorecon -R -v /var/www`
+
 ## YouTube
 
 by `Science Course`
@@ -20,5 +40,15 @@ by `Science Course`
 6. Setup Cent OS
 7. Setup on Ubuntu
 8. Nginx Configurations 
-9.
+9. Setting first virtual host.
 10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
