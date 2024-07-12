@@ -36,6 +36,10 @@
 
 ## Authenication
 
+`ngx_http_auth_basic_module`
+
+### Install Auth Tools
+
 `$ apt install -y apache2-utils`
 or
 `$ yum install -y httpd-tools`
@@ -53,6 +57,8 @@ In `etc/nginx` directory:
 `$ curl -u admin:supersecret localhost:8080/admin.html`
 
 ## SSL
+
+`ngx_http_ssl_module`
 
 ### Generate Self Signed Certificate
 
@@ -72,6 +78,10 @@ In `/etc/nginx/ssl` directory:
 
 `$ curl -k [-u admin:supersecret] https://localhost:4443`
 
+## Rewrite Module
+
+`ngx_http_rewrite_module`
+
 ## YouTube
 
 by `Science Course`
@@ -88,7 +98,7 @@ by `Science Course`
 10. Errors (404, 50x)
 11. Basic Authentication
 12. SSL certificate (self signed)
-13.
+13. Rewrite rules.
 14.
 15.
 16.
