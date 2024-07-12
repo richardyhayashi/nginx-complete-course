@@ -1,0 +1,7 @@
+.env
+.trunk
+
+etc/nginx/.htpasswd
+
+etc/nginx/ssl/private.key
+etc/nginx/ssl/public.pem

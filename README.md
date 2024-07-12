@@ -42,12 +42,35 @@ or
 
 ### Generate Password File
 
+In `etc/nginx` directory:
+
 `$ htpasswd -c /etc/nginx/.htpasswd admin`
-* Will ask for password; creates encoded password.
+
+* Will ask for password use 'supersecret'; creates encoded password.
 
 ### Access Protected Page
 
-`$ curl -u admin:supersecret loclahosr:8080/admin.html`
+`$ curl -u admin:supersecret localhost:8080/admin.html`
+
+## SSL
+
+### Generate Self Signed Certificate
+
+In `/etc/nginx/ssl` directory:
+
+`$ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/private.key -out /etc/nginx/ssl/public.pem`
+
+* `-req` certificate request
+* `-x509` structure
+* `-nodes` not encrypt output key
+* `-days` set expiration days of certificate
+* `-newkey` type of key generated
+* `-keyout` private key out
+* `-out ` public key out
+
+### Curl https
+
+`$ curl -k [-u admin:supersecret] https://localhost:4443`
 
 ## YouTube
 
@@ -64,7 +87,7 @@ by `Science Course`
 9. Setting first virtual host
 10. Errors (404, 50x)
 11. Basic Authentication
-12.
+12. SSL certificate (self signed)
 13.
 14.
 15.
@@ -73,3 +96,8 @@ by `Science Course`
 18.
 19.
 20.
+21.
+22.
+23.
+24.
+25.
