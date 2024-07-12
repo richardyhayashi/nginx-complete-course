@@ -8,6 +8,7 @@ services:
       - ${NGINX_SSL_OUT}:${NGINX_SSL}
     volumes:
       - ./etc/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./src:/usr/share/nginx/html
       - ./var/www/example.com/html:/var/www/example.com/html
     #env_file:
       #  - ./.env

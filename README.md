@@ -12,6 +12,8 @@
 
 `$ curl localhost:8080`
 
+`$ curl localhost:8080/fake.html`
+
 ### Using Header
 
 `$ curl --header "Host: example.com" localhost:8080`
@@ -40,8 +42,8 @@ by `Science Course`
 6. Setup Cent OS
 7. Setup on Ubuntu
 8. Nginx Configurations 
-9. Setting first virtual host.
-10.
+9. Setting first virtual host
+10. Errors (404, 50x)
 11.
 12.
 13.
