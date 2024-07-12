@@ -12,6 +12,11 @@
 
 'https://nginx.org/en/docs/'
 
+## Get Nginx Version
+
+`nginx -v`
+`nginx -V 2>&1 | tr -- - '\n' | grep _module`
+
 ## Curl
 
 `$ curl localhost:8080`
@@ -100,7 +105,7 @@ by `Science Course`
 12. SSL certificate (self signed)
 13. Rewrite rules.
 14. Return (from http to https)
-15.
+15. Modules
 16.
 17.
 18.
