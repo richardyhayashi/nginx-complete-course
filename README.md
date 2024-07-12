@@ -99,7 +99,7 @@ by `Science Course`
 11. Basic Authentication
 12. SSL certificate (self signed)
 13. Rewrite rules.
-14.
+14. Return (from http to https)
 15.
 16.
 17.
